@@ -1,11 +1,11 @@
 <template>
   <UForm :schema="loginSchema" :state="loginForm" class="w-full space-y-4" @submit="handleLogin">
     <UFormField label="Email" name="email">
-      <UInput v-model="loginForm.email" class="w-full" />
+      <UInput v-model="loginForm.email" class="w-full" placeholder="exemplo@email.com" />
     </UFormField>
 
-    <UFormField label="Password" name="password">
-      <UInput v-model="loginForm.password" type="password" class="w-full" />
+    <UFormField label="Senha" name="password">
+      <UInput v-model="loginForm.password" type="password" class="w-full" placeholder="********" />
     </UFormField>
 
     <UButton type="submit" :loading="props.loading">Entrar</UButton>

@@ -4,9 +4,9 @@ import type { User } from '@supabase/supabase-js'
 export const useAuthStore = defineStore('authStore', () => {
   const router = useRouter()
   const supabase = useSupabaseClient()
-  const user = ref<User['user_metadata'] | null>(null)
+  const user = ref<User | null>(null)
 
-  const setUser = async (newUser: User['user_metadata'] | null) => {
+  const setUser = async (newUser: User | null) => {
     user.value = newUser
   }
 
@@ -25,7 +25,7 @@ export const useAuthStore = defineStore('authStore', () => {
 
     if (error) throw error
 
-    setUser(data.user.user_metadata)
+    setUser(data.user)
   }
 
   const signup = async (email: string, password: string, name: string) => {

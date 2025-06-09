@@ -10,19 +10,19 @@
 
   <UForm :schema="signupSchema" :state="signupForm" class="w-full space-y-4" @submit="onSubmit">
     <UFormField label="Nome" name="name">
-      <UInput v-model="signupForm.name" class="w-full" />
+      <UInput v-model="signupForm.name" class="w-full" placeholder="John Doe" />
     </UFormField>
 
     <UFormField label="Email" name="email">
-      <UInput v-model="signupForm.email" class="w-full" />
+      <UInput v-model="signupForm.email" class="w-full" placeholder="exemplo@email.com" />
     </UFormField>
 
     <UFormField label="Senha" name="password">
-      <UInput v-model="signupForm.password" type="password" class="w-full" />
+      <UInput v-model="signupForm.password" type="password" class="w-full" placeholder="********" />
     </UFormField>
 
     <UFormField label="Confirmar senha" name="passwordConfirmation">
-      <UInput v-model="signupForm.passwordConfirmation" type="password" class="w-full" />
+      <UInput v-model="signupForm.passwordConfirmation" type="password" class="w-full" placeholder="********" />
     </UFormField>
 
     <UButton type="submit" :loading="props.loading">Criar conta</UButton>
